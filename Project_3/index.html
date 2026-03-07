@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Romania Travel Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWix+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkR4j8yR8M9R8N0i5Vf3L7hIwrKyYVJZZzNQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <div class="site-grid">
+      <header class="site-header" id="top">
+        <div class="brand-wrap">
+          <img class="site-logo" src="img/logo.svg" alt="Romania Roadbook logo" />
+          <div>
+            <h1>Romania Roadbook</h1>
+            <p>History, food, and city adventures across three regions</p>
+          </div>
+        </div>
+        <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="site-nav">
+          <span class="hamburger-lines" aria-hidden="true"></span>
+          <span class="menu-label">Menu</span>
+        </button>
+      </header>
+
+      <aside class="site-aside" id="site-nav">
+        <nav aria-label="Main navigation">
+          <a href="#home"><i class="fa-solid fa-house"></i> Home</a>
+          <a href="#wallachia"><i class="fa-solid fa-fort-awesome"></i> Wallachia</a>
+          <a href="#transylvania"><i class="fa-solid fa-chess-rook"></i> Transylvania</a>
+          <a href="#moldova"><i class="fa-solid fa-landmark"></i> Moldova</a>
+          <a href="#food"><i class="fa-solid fa-utensils"></i> Food</a>
+          <a href="#transport"><i class="fa-solid fa-train"></i> Transportation</a>
+          <a href="#weather"><i class="fa-solid fa-cloud-sun"></i> Weather</a>
+          <a href="#gallery"><i class="fa-solid fa-camera"></i> Gallery</a>
+          <a href="#media"><i class="fa-solid fa-circle-play"></i> Media</a>
+          <a href="#contact"><i class="fa-solid fa-envelope"></i> Contact</a>
+        </nav>
+        <section class="aside-transport">
+          <h2><i class="fa-solid fa-train"></i> Getting Around</h2>
+          <p>
+            Romania has an extensive rail network operated by CFR (Căile Ferate
+            Române). Trains connect major cities including Bucharest, Cluj-Napoca,
+            Iași, Constanța, and Brașov
+          </p>
+          <p>
+            Check schedules and tickets at
+            <a href="https://www.cfrcalatori.ro" target="_blank" rel="noopener noreferrer">CFR Călători Official Website</a>
+          </p>
+        </section>
+        <section class="aside-weather" id="weather">
+          <h2><i class="fa-solid fa-cloud-sun"></i> Weather</h2>
+          <p>Current conditions and packing suggestions</p>
+          <div class="weather-grid" id="weather-grid"></div>
+        </section>
+      </aside>
+
+      <main class="site-main">
+        <section class="panel fade-in" id="home">
+          <h2>Welcome to Romania</h2>
+          <p>
+            Romania combines mountain landscapes, medieval towns, and lively urban culture.
+            This site focuses on Wallachia, Transylvania, and Moldova while highlighting major
+            destinations such as Bucharest, Cluj-Napoca, Suceava, and Constanta
+          </p>
+          <div class="romania-map-overlay" aria-label="Romania map region quick links">
+            <img
+              class="romania-static-map"
+              src="img/romania-admin1.svg"
+              alt="Map of Romania with region labels"
+            />
+            <a class="map-link map-link-transylvania" href="#transylvania">Transylvania</a>
+            <a class="map-link map-link-moldova" href="#moldova">Moldova</a>
+            <a class="map-link map-link-wallachia" href="#wallachia">Wallachia</a>
+          </div>
+          <div class="card-row">
+            <article class="info-card">
+              <h3>Discover the Regions</h3>
+              <p>
+                Romania is traditionally divided into several historical regions, each
+                with its own identity and traditions. This guide focuses on Wallachia,
+                Transylvania, and Moldova, three regions known for their castles,
+                monasteries, vibrant cities, and breathtaking landscapes
+              </p>
+            </article>
+            <article class="info-card">
+              <h3>Historic Cities & Landmarks</h3>
+              <p>
+                From the grand boulevards of Bucharest to the medieval streets of Sibiu
+                and Sighisoara, Romania offers a rich architectural heritage. Visitors
+                can explore castles, historic churches, monasteries, and UNESCO heritage
+                sites across the country
+              </p>
+            </article>
+            <article class="info-card">
+              <h3>Nature & Scenic Landscapes</h3>
+              <p>
+                Romania's landscapes range from the towering peaks of the Carpathian
+                Mountains to the forests of Transylvania and the shores of the Black Sea.
+                The country offers spectacular natural scenery ideal for hiking,
+                photography, and cultural exploration
+              </p>
+            </article>
+            <article class="info-card">
+              <h3>Travel Tips</h3>
+              <p>
+                Romania is best explored by combining city visits with countryside trips.
+                Spring and early autumn offer pleasant weather and fewer crowds, while
+                summer is ideal for visiting the Black Sea coast. Trains operated by the
+                national railway (CFR) connect most major cities, making travel between
+                regions convenient and scenic
+              </p>
+            </article>
+          </div>
+          <details class="tips-box">
+            <summary>Quick Trip Planning Tips</summary>
+            <p>
+              Pack layers for variable weather, keep cash for smaller towns, and include one
+              rest day between long intercity travel legs
+            </p>
+          </details>
+        </section>
+
+        <section class="panel fade-in" id="wallachia">
+          <h2>Wallachia</h2>
+          <p>
+            Wallachia is one of the historical principalities of southern Romania and was once
+            ruled by powerful voievods during the medieval period. The region's early capital
+            was the fortified city of Targoviste before political power gradually shifted to
+            Bucharest, which remains Romania's modern capital today. Wallachia is characterized
+            by rolling hills, fertile plains, and historic towns that reflect centuries of
+            political and cultural development
+          </p>
+          <p>
+            One of the most iconic landmarks associated with the region is Bran Castle. Perched
+            dramatically on a rocky hill near the Carpathian Mountains, the castle was built in
+            the 14th century and served as a strategic defensive fortress. Although commonly
+            linked with the Dracula legend, Bran Castle is historically valuable for its medieval
+            architecture and panoramic mountain views
+          </p>
+          <p>
+            Travelers can also visit Constanta on the Black Sea coast. As Romania's largest
+            seaport, Constanta combines ancient history with seaside tourism. Originally founded
+            as the Greek colony of Tomis, the city today offers beaches, maritime culture, and
+            historic landmarks such as the famous Constanta Casino overlooking the sea
+          </p>
+          <div class="region-gallery">
+            <img src="img/wallachia/arcul.jpg" alt="Arcul de Triumf in Bucharest" />
+            <img src="img/wallachia/constanta.jpg" alt="Constanta city on the Black Sea coast" />
+            <img src="img/wallachia/peles1.jpg" alt="Peles Castle exterior view" />
+            <img src="img/wallachia/peles2.jpg" alt="Peles Castle alternate architectural view" />
+          </div>
+          <div class="card-row">
+            <article class="info-card">
+              <h3>Top Stops</h3>
+              <p>Palace of the Parliament, Old Town, Curtea de Arges Monastery</p>
+            </article>
+            <article class="info-card">
+              <h3>Food</h3>
+              <p>Sarmale, ciorba de burta, and papanasi served in traditional bistros</p>
+            </article>
+            <article class="info-card">
+              <h3>Regional Food Highlights</h3>
+              <p>
+                Try moussaka-style baked dishes, grilled mici, and seasonal produce from southern
+                markets near Bucharest and Prahova
+              </p>
+            </article>
+            <article class="info-card">
+              <h3>Cultural Highlights</h3>
+              <ul>
+                <li>Historic monasteries</li>
+                <li>Medieval castles</li>
+                <li>Traditional markets</li>
+                <li>Local cuisine and festivals</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section class="panel fade-in" id="transylvania">
+          <h2>Transylvania</h2>
+          <p>
+            Transylvania is one of Romania's most historically rich regions and is famous for its
+            dramatic landscapes, medieval towns, and cultural diversity. Surrounded by the
+            Carpathian Mountains, the region offers breathtaking natural scenery including forests,
+            alpine valleys, and mountain passes
+          </p>
+          <p>
+            Throughout history Transylvania has been influenced by Romanian, Hungarian, and Saxon
+            cultures, which shaped the architecture and traditions still visible today. Cities
+            such as Cluj-Napoca, Sibiu, and Brasov feature colorful historic squares, gothic
+            churches, and well-preserved medieval fortifications
+          </p>
+          <p>
+            The region is also known for its castles and fortified churches that once protected
+            settlements from invasion. Today Transylvania blends historic charm with modern
+            cultural life, festivals, universities, and growing technology industries centered in
+            cities like Cluj-Napoca
+          </p>
+          <div class="region-gallery">
+            <img src="img/transylvania/bran.jpg" alt="Bran Castle in Transylvania" />
+            <img src="img/transylvania/cluj.jpg" alt="Cluj-Napoca city center" />
+            <img src="img/transylvania/sibiu.jpg" alt="Historic Sibiu square" />
+            <img src="img/transylvania/sighisoara.jpg" alt="Sighisoara church and medieval streets" />
+          </div>
+          <div class="card-row">
+            <article class="info-card">
+              <h3>Top Stops</h3>
+              <p>Cluj Old Center, Turda Salt Mine, nearby castles and fortified churches</p>
+            </article>
+            <article class="info-card">
+              <h3>Food</h3>
+              <p>Goulash-style stews, smoked meats, and artisan pastries</p>
+            </article>
+            <article class="info-card">
+              <h3>Regional Food Highlights</h3>
+              <p>
+                Look for slow-cooked stews, smoked cheeses, and rustic breads influenced by
+                mountain and Saxon traditions
+              </p>
+            </article>
+            <article class="info-card">
+              <h3>Cultural Highlights</h3>
+              <ul>
+                <li>Historic monasteries</li>
+                <li>Medieval castles</li>
+                <li>Traditional markets</li>
+                <li>Local cuisine and festivals</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section class="panel fade-in" id="moldova">
+          <h2>Moldova Region</h2>
+          <p>
+            The historical region of Moldova in northeastern Romania should not be confused with
+            the modern Republic of Moldova. This region has long been an important center of
+            Romanian political, religious, and cultural life
+          </p>
+          <p>
+            One of the most celebrated rulers of the region was Stefan cel Mare (Stephen the
+            Great), a 15th-century voievod who defended Moldova from numerous invasions and
+            strengthened the principality's independence. His reign left a lasting legacy in the
+            form of churches and monasteries built throughout the region
+          </p>
+          <p>
+            Among Moldova's greatest cultural treasures are the Painted Monasteries of Bucovina,
+            recognized as UNESCO World Heritage sites. Monasteries such as Voronet are famous for
+            their vividly colored exterior frescoes depicting biblical scenes and medieval history.
+            The city of Iasi later emerged as an important political and intellectual center and
+            remains one of Romania's major university cities today
+          </p>
+          <div class="region-gallery region-gallery-moldova">
+            <img src="img/moldova/rarau.jpg" alt="Rarau mountain panorama" />
+            <img src="img/moldova/suceava_fortress.jpg" alt="Cetatea Suceava fortress" />
+            <img src="img/moldova/sucevita.jpg" alt="Sucevita Monastery" />
+            <img src="img/moldova/voronet1.jpg" alt="Voronet Monastery exterior" />
+            <img src="img/moldova/voronet2.jpg" alt="Voronet Monastery fresco details" />
+          </div>
+          <div class="card-row">
+            <article class="info-card">
+              <h3>Top Stops</h3>
+              <p>Suceava Fortress, Voronet Monastery, Bucovina scenic routes</p>
+            </article>
+            <article class="info-card">
+              <h3>Food</h3>
+              <p>Hearty soups, roasted meats, local cheeses, and honey desserts</p>
+            </article>
+            <article class="info-card">
+              <h3>Regional Food Highlights</h3>
+              <p>
+                Enjoy hearty soups, oven-roasted dishes, and honey-rich desserts shaped by
+                monastic and village culinary traditions
+              </p>
+            </article>
+            <article class="info-card">
+              <h3>Cultural Highlights</h3>
+              <ul>
+                <li>Historic monasteries</li>
+                <li>Medieval castles</li>
+                <li>Traditional markets</li>
+                <li>Local cuisine and festivals</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section class="panel fade-in" id="food">
+          <h2>Romanian Food Highlights</h2>
+          <p>
+            Romanian cuisine blends rural traditions, Balkan flavors, and seasonal ingredients.
+            These dishes are popular across regional markets and family-run restaurants
+          </p>
+          <div class="food-grid">
+            <article class="info-card">
+              <img src="img/food/mititei.jpg" alt="Mititei grilled street food" />
+              <h3>Mititei</h3>
+              <p>Grilled minced meat rolls served hot with mustard and fresh bread</p>
+            </article>
+            <article class="info-card">
+              <img src="img/food/mici.jpg" alt="Mici traditional Romanian barbecue" />
+              <h3>Mici</h3>
+              <p>A Romanian barbecue favorite often enjoyed in parks and open-air markets</p>
+            </article>
+            <article class="info-card">
+              <img src="img/food/cold_salad.jpg" alt="Traditional Romanian cold salad" />
+              <h3>Cold Salad</h3>
+              <p>Refreshing appetizers with seasonal vegetables, herbs, and creamy textures</p>
+            </article>
+            <article class="info-card">
+              <img src="img/food/coliva.jpg" alt="Coliva ceremonial dessert" />
+              <h3>Coliva</h3>
+              <p>A ceremonial wheat dessert with nuts and spices rooted in Orthodox tradition</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="panel fade-in" id="transport">
+          <h2>Transportation</h2>
+          <p>
+            Romania is well connected by rail, road, and regional airports. The most common way
+            to travel between major cities is by train using the national railway operator CFR
+            Calatori. Trains connect Bucharest with cities such as Cluj-Napoca, Iasi, Brasov,
+            Sibiu, and Constanta
+          </p>
+          <p>
+            While travel times can be slower than in Western Europe, the rail system offers
+            scenic routes through the Carpathian Mountains and countryside. Modern InterCity
+            trains provide comfortable seating and connections between Romania's major urban
+            centers
+          </p>
+          <div class="card-row">
+            <article class="info-card">
+              <h3>Rail Travel</h3>
+              <p>
+                CFR trains link most Romanian cities. The Bucharest-Brasov-Cluj route is
+                particularly scenic as it crosses the Carpathian Mountains. Plan routes on
+                <a href="https://www.cfrcalatori.ro" target="_blank" rel="noopener noreferrer">CFR Călători</a>
+              </p>
+            </article>
+            <article class="info-card">
+              <h3>Regional Buses</h3>
+              <p>
+                Private bus companies connect smaller towns and villages not served by direct
+                rail routes
+              </p>
+            </article>
+            <article class="info-card">
+              <h3>City Transport</h3>
+              <p>
+                For Bucharest city transport, see
+                <a href="https://www.stb.ro/" target="_blank" rel="noopener noreferrer">Bucharest Buses</a>
+              </p>
+              <p>
+                For Bucharest Metro service, visit
+                <a href="https://www.metrorex.ro/" target="_blank" rel="noopener noreferrer">Metrorex</a>
+              </p>
+              <p>
+                Major cities such as Bucharest and Cluj-Napoca offer public transport including
+                buses, trams, and metro lines
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="panel fade-in" id="gallery">
+          <h2>Gallery</h2>
+          <div class="gallery-grid">
+            <figure class="gallery-item">
+              <img src="img/transylvania/bran.jpg" alt="Bran Castle overlooking the Carpathian Mountains" />
+              <figcaption>Bran Castle overlooking the Carpathian Mountains</figcaption>
+            </figure>
+            <figure class="gallery-item">
+              <img src="img/wallachia/peles1.jpg" alt="Peles Castle in Wallachia" />
+              <figcaption>Peles Castle architecture in the Carpathian foothills</figcaption>
+            </figure>
+            <figure class="gallery-item">
+              <img src="img/transylvania/sibiu.jpg" alt="Sibiu historic city center" />
+              <figcaption>Sibiu's historic square and colorful facades</figcaption>
+            </figure>
+            <figure class="gallery-item">
+              <img src="img/moldova/voronet1.jpg" alt="Voronet Monastery exterior" />
+              <figcaption>Voronet Monastery, known for iconic painted walls</figcaption>
+            </figure>
+            <figure class="gallery-item">
+              <img src="img/moldova/sucevita.jpg" alt="Sucevita Monastery architecture" />
+              <figcaption>Sucevita Monastery and fortified monastic architecture</figcaption>
+            </figure>
+            <figure class="gallery-item">
+              <img src="img/moldova/rarau.jpg" alt="Rarau mountain panorama" />
+              <figcaption>Panoramic view of the Rarau mountain landscape</figcaption>
+            </figure>
+            <figure class="gallery-item">
+              <img src="img/wallachia/constanta.jpg" alt="Constanta Black Sea coastline" />
+              <figcaption>Constanta coastline along Romania's Black Sea shore</figcaption>
+            </figure>
+            <figure class="gallery-item">
+              <img src="img/wallachia/arcul.jpg" alt="Arcul de Triumf in Bucharest" />
+              <figcaption>Arcul de Triumf landmark in Bucharest</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section class="panel fade-in" id="media">
+          <h2>Media</h2>
+          <div class="video-wrap">
+            <iframe
+              src="https://www.youtube.com/embed/4h4DwufM8xI"
+              title="Romania travel video"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <p>
+            If the embedded player is unavailable in your browser, watch directly on
+            <a href="https://www.youtube.com/watch?v=4h4DwufM8xI" target="_blank" rel="noopener noreferrer">YouTube</a>
+          </p>
+        </section>
+
+        <section class="panel fade-in" id="contact">
+          <h2>Contact & Resources</h2>
+          <div class="contact-list">
+            <p><i class="fa-solid fa-envelope"></i> travel@romaniaroadbook.example</p>
+            <p><i class="fa-solid fa-phone"></i> +40 21 555 1234</p>
+            <p><i class="fa-solid fa-map-location-dot"></i> 15 Carpathian Ave, Bucharest 010101</p>
+            <p>
+              <i class="fa-solid fa-link"></i>
+              Transit portals:
+              <a href="https://www.cfrcalatori.ro" target="_blank" rel="noopener noreferrer">CFR</a>,
+              <a href="https://www.metrorex.ro/" target="_blank" rel="noopener noreferrer">Metrorex</a>,
+              <a href="https://www.stb.ro/" target="_blank" rel="noopener noreferrer">STB</a>
+            </p>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <p>Romania Roadbook | Responsive travel website project</p>
+      </footer>
+    </div>
+
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+      <button class="lightbox-close" id="lightbox-close" aria-label="Close image viewer">X</button>
+      <img class="lightbox-image" id="lightbox-image" alt="" />
+    </div>
+
+    <script src="js/weather.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
