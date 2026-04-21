@@ -1,0 +1,292 @@
+/*
+  Light theme overrides:
+  - Replaces the dark glass theme with a bright editorial travel look
+  - Uses Sighisoara photography as the site background instead of the church window image
+  - Swaps in serif display headings and a lighter sans-serif body font
+  - Changes panels, cards, navigation, buttons, map labels, and footer to warm ivory surfaces
+  - Introduces blue, terracotta, and gold accents with softer shadows and lighter gradients
+  - Adds Log Visit-specific light theme overrides so the registration form matches the light palette
+    while leaving dark theme form styles unchanged in main.css
+*/
+
+:root {
+  --secondary: #b85c38;
+  --text: #2b2f36;
+  --panel: rgba(255, 250, 242, 0.88);
+  --card: rgba(255, 255, 255, 0.92);
+  --shadow: 0 20px 44px rgba(53, 67, 88, 0.18);
+}
+
+body {
+  color: var(--text);
+  font-family: "Source Sans 3", sans-serif;
+  background:
+    linear-gradient(rgba(248, 243, 231, 0.62), rgba(248, 243, 231, 0.82)),
+    url("../img/transylvania/sighisoara.jpg") center center / cover no-repeat fixed;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Cormorant Garamond", serif;
+  letter-spacing: 0.02em;
+}
+
+.site-header,
+.site-main,
+.site-aside,
+.site-footer {
+  box-shadow: var(--shadow);
+}
+
+.site-header {
+  background:
+    linear-gradient(135deg, rgba(248, 242, 230, 0.94), rgba(241, 229, 208, 0.92));
+  color: #233248;
+  backdrop-filter: blur(10px);
+}
+
+.site-header h1 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2.3rem, 5vw, 4.4rem);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.site-header p {
+  color: #566277;
+}
+
+.site-logo {
+  filter: none;
+}
+
+.menu-btn {
+  background: linear-gradient(135deg, #355070, #4f6d8f);
+  color: #fffaf2;
+}
+
+.theme-toggle-btn {
+  border-color: rgba(53, 80, 112, 0.28);
+  background: linear-gradient(135deg, rgba(53, 80, 112, 0.92), rgba(79, 109, 143, 0.86));
+  color: #fffaf2;
+}
+
+.lang-toggle-btn {
+  border-color: rgba(53, 80, 112, 0.22);
+  background: rgba(255, 255, 255, 0.7);
+  color: #233248;
+}
+
+.lang-toggle-btn:hover {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.theme-toggle-btn:hover {
+  background: linear-gradient(135deg, rgba(53, 80, 112, 1), rgba(79, 109, 143, 0.96));
+}
+
+.lang-toggle-btn:focus-visible,
+.theme-toggle-btn:focus-visible {
+  outline-color: #355070;
+}
+
+.hamburger-lines,
+.hamburger-lines::before,
+.hamburger-lines::after {
+  background: #fffaf2;
+}
+
+.site-main {
+  background: rgba(255, 248, 238, 0.74);
+  backdrop-filter: blur(12px);
+}
+
+.site-aside {
+  background:
+    linear-gradient(180deg, rgba(248, 242, 232, 0.95), rgba(236, 226, 210, 0.93));
+  backdrop-filter: blur(12px);
+}
+
+.site-aside a {
+  color: #233248;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(79, 109, 143, 0.14);
+}
+
+.site-aside a:hover {
+  transform: translateX(-2px);
+  background: linear-gradient(135deg, rgba(79, 109, 143, 0.16), rgba(184, 92, 56, 0.18));
+}
+
+.site-aside a:focus-visible,
+.menu-btn:focus-visible,
+.tips-box summary:focus-visible,
+.lightbox-close:focus-visible {
+  outline-color: #355070;
+}
+
+.aside-weather,
+.aside-transport,
+.tips-box {
+  background: rgba(255, 255, 255, 0.72);
+  color: var(--text);
+  border: 1px solid rgba(79, 109, 143, 0.16);
+}
+
+.aside-transport a {
+  color: #355070;
+}
+
+.aside-transport .transport-btn {
+  background: linear-gradient(135deg, #355070, #b85c38);
+  color: #fffaf2;
+}
+
+.panel {
+  background: linear-gradient(180deg, rgba(255, 252, 246, 0.92), rgba(247, 240, 230, 0.88));
+  border-left-color: #355070;
+  backdrop-filter: blur(8px);
+}
+
+.panel h2 {
+  border-bottom-color: rgba(53, 80, 112, 0.22);
+  color: #213147;
+}
+
+.info-card,
+.weather-card {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.97), rgba(248, 242, 233, 0.95));
+  border: 1px solid rgba(184, 92, 56, 0.22);
+  color: var(--text);
+}
+
+.info-card:hover {
+  border-color: rgba(184, 92, 56, 0.5);
+  box-shadow: 0 18px 32px rgba(82, 65, 54, 0.14);
+}
+
+.region-gallery img,
+.gallery-grid img,
+.food-grid .info-card img,
+.romania-static-map {
+  border-color: rgba(79, 109, 143, 0.2);
+  box-shadow: 0 14px 24px rgba(77, 84, 97, 0.14);
+}
+
+.gallery-item figcaption,
+.suggestion,
+.weather-updated,
+.city-icon,
+.site-footer {
+  color: #4b5563;
+}
+
+.map-link {
+  color: #fffaf2;
+  font-family: "Source Sans 3", sans-serif;
+  text-shadow:
+    -1px -1px 0 #355070,
+    1px -1px 0 #355070,
+    -1px 1px 0 #355070,
+    1px 1px 0 #355070,
+    0 0 12px rgba(53, 80, 112, 0.3);
+}
+
+.site-footer {
+  background: linear-gradient(135deg, rgba(248, 242, 230, 0.94), rgba(237, 226, 208, 0.92));
+}
+
+.lightbox {
+  background: rgba(243, 236, 226, 0.88);
+}
+
+.lightbox-close {
+  background: rgba(53, 80, 112, 0.85);
+  color: #fffaf2;
+}
+
+.lightbox-close:hover {
+  background: rgba(53, 80, 112, 1);
+}
+
+/* Light-theme-only polish for the Log Visit registration section */
+#visit .visit-kicker {
+  color: #355070;
+}
+
+#visit .visit-form-shell {
+  background: linear-gradient(180deg, rgba(255, 253, 248, 0.92), rgba(247, 240, 229, 0.88));
+  border: 1px solid rgba(79, 109, 143, 0.2);
+}
+
+#visit .visit-section-block {
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(79, 109, 143, 0.18);
+}
+
+#visit .visit-section-block legend {
+  color: #355070;
+}
+
+#visit .field-label,
+#visit .form-field label {
+  color: #213147;
+}
+
+#visit .form-field input,
+#visit .form-field select,
+#visit .form-field textarea {
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(79, 109, 143, 0.28);
+  color: #1f2937;
+}
+
+#visit .form-field input:focus-visible,
+#visit .form-field select:focus-visible,
+#visit .form-field textarea:focus-visible {
+  outline-color: #355070;
+}
+
+#visit .checkbox-option {
+  background: rgba(255, 255, 255, 0.84);
+  border: 1px solid rgba(79, 109, 143, 0.22);
+}
+
+#visit .errorMsg {
+  color: #b85c38;
+}
+
+#visit .primary-btn {
+  background: linear-gradient(135deg, #355070, #b85c38);
+  color: #fffaf2;
+}
+
+#visit .secondary-btn {
+  background: rgba(255, 255, 255, 0.86);
+  border: 1px solid rgba(79, 109, 143, 0.22);
+  color: #2b2f36;
+}
+
+#visit .visit-thankyou {
+  background: linear-gradient(150deg, rgba(79, 109, 143, 0.16), rgba(255, 255, 255, 0.82));
+  border: 1px solid rgba(79, 109, 143, 0.28);
+}
+
+@media (max-width: 960px) {
+  .site-aside {
+    background: rgba(249, 243, 233, 0.97);
+  }
+}
+
+@media (max-width: 680px) {
+  body {
+    background:
+      linear-gradient(rgba(248, 243, 231, 0.7), rgba(248, 243, 231, 0.88)),
+      url("../img/transylvania/sighisoara.jpg") center center / cover no-repeat fixed;
+  }
+
+  .site-aside {
+    background: rgba(249, 243, 233, 0.98);
+  }
+}
